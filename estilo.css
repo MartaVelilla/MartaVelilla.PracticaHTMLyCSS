@@ -1,0 +1,47 @@
+/* Estilos para las pantallas */
+.screen {
+	display: none; /* Ocultar por defecto */
+	padding: 20px;
+	background-color: #f1f1f1;
+}
+
+/* Estilos para los botones */
+.button {
+	background-color: #4cafac;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	cursor: pointer;
+}
+
+/* Estilo para el botón activo */
+.active {
+	background-color: #3795d4;
+}
+
+/*Estilo de las imagenes  */
+img {
+    display: flex;
+    width: 700px;
+    height: 437px;
+    justify-content: center;
+}
+
+.tabla{
+    display: flex;
+    justify-content: center;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+
+  }
+  
+  .video-container video {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  /*align-items: center;
+      height: 100vh;*/

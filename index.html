@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Destinos veraniegos</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+
+</head>
+<body>
+	<!-- Botones para cada pantalla -->
+	<button class="button" onclick="mostrarPantalla(1)">Formulario</button>
+	<button class="button" onclick="mostrarPantalla(2)">Posibles destinos</button>
+	<button class="button" onclick="mostrarPantalla(3)">Paquetes disponibles</button>
+
+	<!-- Pantallas ocultas -->
+	<div id="pantalla1" class="screen">
+		<h2>Formulario: </h2>
+        <p>Si quieres apuntarte a alguno de nuestros viajes no dudes en apuntarte a ti y a tu familia</p>
+
+
+<form action="#" method="post">
+  <label>Nombre: </label>
+  <input type="text" name="nombre">
+  <br><br>
+  <label>Apellido: </label>
+  <input type="text" name="apellido">
+  <br><br>
+  <label>Teléfono: </label>
+  <input type="text" name="telefono">
+  <br><br>
+  <label>Destino deseado: </label>
+  <input type="text" name="destino">
+  <br><br>
+  <input type="submit" value="Guardar">
+</form>
+<br></br>
+
+
+<table border = 1>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Teléfono</th>
+      <th>Destino</th>
+    </tr>
+  </thead>
+  <tbody id="table-body">
+  </tbody>
+</table>
+
+<script>
+  var form = document.querySelector("form");
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    var variables = {
+      nombre: form.nombre.value,
+      apellido: form.apellido.value,
+      telefono: form.telefono.value,
+      destino: form.destino.value
+    };
+    console.log(variables);
+    addRowToTable(variables);
+  });
+
+  function addRowToTable(variables) {
+    var tableBody = document.querySelector("#table-body");
+    var row = document.createElement("tr");
+
+    var nombreCell = document.createElement("td");
+    nombreCell.textContent = variables.nombre;
+    row.appendChild(nombreCell);
+
+    var apellidoCell = document.createElement("td");
+    apellidoCell.textContent = variables.apellido;
+    row.appendChild(apellidoCell);
+    tableBody.appendChild(row);
+    
+    var telefonoCell =document.createElement("td");
+    telefonoCell.textContent = variables.telefono;
+    row.appendChild(telefonoCell);
+    tableBody.appendChild(row);
+
+    var destinoCell =document.createElement("td");
+    destinoCell.textContent = variables.destino;
+    row.appendChild(destinoCell);
+    tableBody.appendChild(row);
+  }
+</script>
+	</div>
+	<div id="pantalla2" class="screen">
+
+<head>
+	<title>5 Destinos Turísticos en Verano</title>
+</head>
+<body>
+	<h1>5 Destinos Turísticos en Verano</h1>
+	<p>Si estás buscando un destino para tus vacaciones de verano, aquí te presentamos cinco opciones que no te puedes perder:</p>
+
+	<h2>1. Cancún, México</h2>
+	<p>Cancún es uno de los destinos turísticos más populares de México, conocido por sus hermosas playas y su clima cálido y soleado durante todo el año. Aquí puedes disfrutar de actividades acuáticas como el snorkel, el buceo y el parasailing, así como de su vibrante vida nocturna.</p>
+    <a href="https://es.wikipedia.org/wiki/Canc%C3%BAn">Consigue más informacion de Cancún pinchando aquí</a>
+	<figure><img src="https://a.travel-assets.com/findyours-php/viewfinder/images/res40/331000/331911-Grand-Fiesta-Americana-Coral-Beach-Cancun.jpg" alt="Cancún"></figure>
+
+	<h2>2. Bali, Indonesia</h2>
+	<p>Bali es una isla en Indonesia que es conocida por sus hermosos paisajes, playas y su cultura rica y diversa. Aquí puedes explorar los templos antiguos, hacer senderismo por las montañas o simplemente relajarte en la playa.</p>
+    <a href="https://es.wikipedia.org/wiki/Provincia_de_Bali">Consigue más informacion de Bali pinchando aquí</a>
+    <figure><img src="https://media.iatiseguros.com/wp-content/uploads/2018/05/04005529/bali-que-hacer-Templo-Ulun-Danu.jpg" alt="Bali"></figure>
+
+	<h2>3. Santorini, Grecia</h2>
+	<p>Santorini es una isla griega en el mar Egeo, famosa por sus pintorescas casas blancas con techos azules y su espectacular puesta de sol. Aquí puedes caminar por sus estrechas calles empedradas, disfrutar de sus playas y degustar la deliciosa comida griega.</p>
+	<a href="https://es.wikipedia.org/wiki/Santorini">Consigue más informacion de Santorini pinchando aquí</a>
+    <figure><img src="https://a.cdn-hotels.com/gdcs/production18/d1838/041ae6b1-0a88-4c22-a648-53a22dd4a006.jpg" alt="Santorini"></figure>
+
+	<h2>4. Maui, Hawaii</h2>
+	<p>Maui es una isla en Hawaii que es conocida por sus hermosas playas, su clima cálido y su espectacular paisaje natural. Aquí puedes hacer surf, explorar los parques nacionales, hacer senderismo por las montañas o simplemente relajarte en la playa.</p>
+	<a href="https://es.wikipedia.org/wiki/Maui">Consigue más informacion de Maui pinchando aquí</a>
+    <figure><img src="https://www.mensjournal.com/wp-content/uploads/2019/12/MAUI-main.jpg?w=1200&quality=47&strip=all" alt="Maui"></img></figure>
+
+	<h2>5. Barcelona, España</h2>
+	<p>Barcelona es una ciudad española conocida por su cultura vibrante, su impresionante arquitectura y sus hermosas playas. Aquí puedes visitar la famosa Sagrada Familia, caminar por Las Ramblas, disfrutar de la comida española y relajarte en la playa.</p>
+	<a href="https://es.wikipedia.org/wiki/Barcelona">Consigue más informacion de Barcelona pinchando aquí</a>
+    <figure><img src="https://static-resources.mirai.com/wp-content/uploads/sites/1745/20210518071706/cosas-gratis-barcelona-min.jpg" alt="Barcelona"></figure>
+</body>
+
+
+	</div>
+	<div id="pantalla3" class="screen">
+		<h1>Posibles paquetes</h1>
+		<p>Para disfrutar de estos destinos nuestra agencia ofrece 3 paquetes distintos.</p>
+        <h2>Paquete 1: Aventura</h2>
+        <div class="video-container"><img src="https://homsec.es/wp-content/uploads/2020/11/lugar-para-nadar-con-delfines-en-tus-pro%CC%81ximas-vacaiones.jpg" alt="Delfines"></div>
+        <div class = "tabla">
+        <table border=1>
+            <tr>
+              <th>Actividades</th>
+              <th>Duración</th>
+              <th>Precio por persona</th>
+            </tr>
+            <tr> 
+                <td>
+                  <ul>
+                    <li>Explorar la naturaleza</li>
+                    <li>Tirarse en tirolina</li>
+                    <li>Saltar en paracaídas</li>
+                    <li>Nadar con tiburones o delfines</li>
+                    <li>Hacer snorkel</li>
+                    <li>Montar en motos de agua</li>
+                  </ul>
+                </td>
+                <td>4 días - 2 semanas</td>
+                <td> 500-1500 €</td>
+            </tr>
+           
+          </table>
+        </div>
+        <h2>Paquete 2: Relax</h2>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8Zo3B7r8fvA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class = "tabla">
+            <table border=1>
+                <tr>
+                  <th>Actividades</th>
+                  <th>Duración</th>
+                  <th>Precio por persona</th>
+                </tr>
+                <tr> 
+                    <td>
+                      <ul>
+                        <li>Descansar en las mejores playas </li>
+                        <li>Masajes y spa </li>
+                        <li>Yoga y pilates </li>
+                      </ul>
+                    </td>
+                    <td>1-3 semanas</td>
+                    <td>700-2000 €</td>
+                </tr>
+               
+              </table>
+            </div>
+
+        <h2>Paquete 3: Turismo</h2>
+        <div class="video-container"><img src="https://www.caribbeannewsdigital.com/sites/default/files/sites/default/files/es/imagenes_noticias/barcelona3_0.jpg" alt="Delfines"></div>
+        <div class = "tabla">
+          <table border=1>
+              <tr>
+                <th>Actividades</th>
+                <th>Duración</th>
+                <th>Precio por persona</th>
+              </tr>
+              <tr> 
+                  <td>
+                    <ul>
+                      <li>Disfruta de los mejores paisajes </li>
+                      <li>Autobuses turísticos </li>
+                      <li>Museos </li>
+                      <li>Guias para conocer los grandes monumentos </li>
+                    </ul>
+                  </td>
+                  <td>3 días- 2 semanas</td>
+                  <td>400-1700 €</td>
+              </tr>
+             
+            </table>
+          </div>
+
+	</div>
+
+	<script type="text/javascript">
+		function mostrarPantalla(numero) {
+			// Ocultar todas las pantallas
+			var screens = document.getElementsByClassName("screen");
+			for (var i = 0; i < screens.length; i++) {
+				screens[i].style.display = "none";
+			}
+			// Mostrar la pantalla seleccionada
+			document.getElementById("pantalla" + numero).style.display = "block";
+			// Cambiar el estilo del botón activo
+			var buttons = document.getElementsByClassName("button");
+			for (var i = 0; i < buttons.length; i++) {
+				buttons[i].classList.remove("active");
+			}
+			buttons[numero - 1].classList.add("active");
+		}
+	</script>
+</body>
+</html>
